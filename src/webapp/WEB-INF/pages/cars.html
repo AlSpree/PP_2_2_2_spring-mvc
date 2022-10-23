@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CARS INFO</title>
+    <style>table th, table td {padding: 8px;}</style>
+</head>
+<body>
+
+<table border>
+
+    <tr style="text-align: center">
+        <th>Model</th>
+        <th>Color</th>
+        <th>Year of produce</th>
+    </tr>
+
+    <tbody>
+    <tr th:each="car, iterStat : ${ourCars}" style="text-align: center">
+        <td th:text="${car.model}"></td>
+        <td th:text="${car.color}"></td>
+        <td th:text="${car.yearOfProduce}"></td>
+    </tr>
+    </tbody>
+
+</table>
+<br><br>
+<a href="/">return to Homepage</a>
+
+</body>
+</html>
